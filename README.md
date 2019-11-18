@@ -12,12 +12,18 @@ Add your IoT Central DeviceID, Scope ID and Primary Key to the recognize_video.p
 
 Adjust the Serial port settings on line 36 to connect the Pi to the Arduino;
 
+```python
 ser = serial.Serial('/dev/ttyUSB0', 9600)
+```
 
 Start the Video Recognition using;
 
+```sh
 python recognize_video.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
+```
 
 There's a second version which makes use of threads in order to speed up the framerate;
 
+``` sh
 python recognize_video_thread.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
+```
