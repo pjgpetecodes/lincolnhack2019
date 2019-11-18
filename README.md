@@ -14,3 +14,6 @@ Adjust the Serial port settings on line 36 to connect the Pi to the Arduino;
 
 ser = serial.Serial('/dev/ttyUSB0', 9600)
 
+Start the Video Recognition using;
+
+python recognize_video.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
